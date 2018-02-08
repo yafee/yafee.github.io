@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="vue,微信授权,微信支付," />
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="DONE IS BETTER THAN PERFECT!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Eason壹捌柒肆">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="App分享到微信： 分享之后微信会自动在/#/之后加上?from=timeline或?from=groupmessage或?from=singlemessage 分享之后第一次链接打开跳转授权是正常的，第二次打开如果有多个参数就会被去掉第一个之后的所有参数/解决办法/：   分享微信自动加参数可以用vue-router的前置路由守卫，代码实例分享链接比如http://www.xxx.com/#/">
+<meta name="keywords" content="vue,微信授权,微信支付">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue 微信踩坑">
+<meta property="og:url" content="http://yoursite.com/2018/02/08/vue-微信踩坑/index.html">
 <meta property="og:site_name" content="Eason壹捌柒肆">
-<meta property="og:description" content="DONE IS BETTER THAN PERFECT!">
+<meta property="og:description" content="App分享到微信： 分享之后微信会自动在/#/之后加上?from=timeline或?from=groupmessage或?from=singlemessage 分享之后第一次链接打开跳转授权是正常的，第二次打开如果有多个参数就会被去掉第一个之后的所有参数/解决办法/：   分享微信自动加参数可以用vue-router的前置路由守卫，代码实例分享链接比如http://www.xxx.com/#/">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-08T06:46:36.733Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Eason壹捌柒肆">
-<meta name="twitter:description" content="DONE IS BETTER THAN PERFECT!">
+<meta name="twitter:title" content="vue 微信踩坑">
+<meta name="twitter:description" content="App分享到微信： 分享之后微信会自动在/#/之后加上?from=timeline或?from=groupmessage或?from=singlemessage 分享之后第一次链接打开跳转授权是正常的，第二次打开如果有多个参数就会被去掉第一个之后的所有参数/解决办法/：   分享微信自动加参数可以用vue-router的前置路由守卫，代码实例分享链接比如http://www.xxx.com/#/">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/08/vue-微信踩坑/"/>
 
 
 
 
 
-  <title>Eason壹捌柒肆</title>
+  <title>vue 微信踩坑 | Eason壹捌柒肆</title>
   
 
 
@@ -143,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,9 +238,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -269,9 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/08/vue-微信踩坑/" itemprop="url">vue 微信踩坑</a></h1>
+          <h1 class="post-title" itemprop="name headline">vue 微信踩坑</h1>
         
 
         <div class="post-meta">
@@ -365,8 +364,7 @@
       
 
       
-        
-          <ol>
+        <ol>
 <li>App分享到微信：<ul>
 <li>分享之后微信会自动在<code>/#/</code>之后加上<code>?from=timeline</code>或<code>?from=groupmessage</code>或<code>?from=singlemessage</code></li>
 <li>分享之后第一次链接打开跳转授权是正常的，第二次打开如果有多个参数就会被去掉第一个之后的所有参数<br>/解决办法/：</li>
@@ -377,14 +375,24 @@
 </ol>
 </li>
 </ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/08/vue-微信踩坑/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<a id="more"></a>
+<pre><code>2. app分享时只传一个参数，把所有参数值用`_`连接，比如`data=value1-value2`，不要用`key1=value1&amp;key2=value2`，取值的时候可以用`this.$route.query.data.split(&apos;_&apos;)`得到数组之后再取单个的值。
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="keyword">this</span>.$route.query.data) &#123;</span><br><span class="line">  <span class="keyword">let</span> queryArray = <span class="keyword">this</span>.$route.query.data.split(<span class="string">'_'</span>);</span><br><span class="line">  <span class="keyword">this</span>.key1 = queryArray[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">this</span>.key2 = queryArray[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>vue微信问题</p>
+<ul>
+<li><p>微信获取授权<br>如果使用的路由模式是默认hash，把<code>#</code>去掉，判断是否已经授权，如果未授权，用<code>window.location.href</code>跳转后台授权接口，并且把处理后的链接地址当作参数带过去，<code>window.location.href=&#39;/wxAuth?url=&#39;+url;</code>然后后台授权成功之后跳转中转页面，把页面链接url当作参数传过来，用再把<code>#</code>加上去，设置已授权<code>flag</code>，再跳转回原来的页面；<br>访问页面：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> url = <span class="built_in">window</span>.location.href;</span><br><span class="line"><span class="keyword">let</span> isAuth = <span class="built_in">window</span>.sessionStorage.getItem(<span class="string">'isAuth'</span>);</span><br><span class="line"><span class="keyword">if</span> (!isAuth) &#123;</span><br><span class="line">  <span class="keyword">let</span> nextUrl = url.replace(<span class="string">'#/'</span>, <span class="string">''</span>);</span><br><span class="line">  <span class="built_in">window</span>.location.href = <span class="string">"/wxAuth?url="</span>+url;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>中转页面：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> url = <span class="built_in">window</span>.location.href;</span><br><span class="line"><span class="keyword">let</span> reUrl = <span class="built_in">window</span>.location.search.split(<span class="string">'?url='</span>)[<span class="number">1</span>];</span><br><span class="line"><span class="built_in">window</span>.sessionStorage.setItem(<span class="string">'isAuth'</span>, <span class="literal">true</span>);</span><br><span class="line">reUrl = reUrl.replace(<span class="string">'index'</span>, <span class="string">'#/index'</span>);</span><br><span class="line"><span class="built_in">window</span>.location.href = reUrl;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>微信支付<br>首先，<code>wx.config</code>中注入<code>chooseWXPay</code>微信支付后台授权目录配到二级，在支付页面<code>#</code>前面加上<code>?</code>,然后原页面跳转一下，</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> url = <span class="built_in">window</span>.location.href;</span><br><span class="line"><span class="keyword">if</span> (!url.match(<span class="regexp">/\?#/</span>)) &#123;</span><br><span class="line">  <span class="built_in">window</span>.location.replace(<span class="built_in">window</span>.location.href.split(<span class="string">'#'</span>)[<span class="number">0</span>] + <span class="string">'?'</span> + <span class="built_in">window</span>.location.hash);</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+
       
     </div>
     
@@ -399,14 +407,24 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/vue/" rel="tag"># vue</a>
+          
+            <a href="/tags/微信授权/" rel="tag"># 微信授权</a>
+          
+            <a href="/tags/微信支付/" rel="tag"># 微信支付</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -416,10 +434,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -427,6 +446,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -651,6 +674,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
