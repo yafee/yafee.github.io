@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="javascript,vue,微信授权,微信支付," />
+  <meta name="keywords" content="javascript,原生方法," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="App分享到微信： 分享之后微信会自动在/#/之后加上?from=timeline或?from=groupmessage或?from=singlemessage 分享之后第一次链接打开跳转授权是正常的，第二次打开如果有多个参数就会被去掉第一个之后的所有参数/解决办法/：   分享微信自动加参数可以用vue-router的前置路由守卫，代码实例分享链接比如http://www.xxx.com/#/">
-<meta name="keywords" content="javascript,vue,微信授权,微信支付">
+<meta name="description" content="document.execCommand()语法bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument) 返回值是布尔值，表示是否支持。 aCommandName: 命令名字,copy,cut等aShowDefaultUI:一个 Boolean， 是否展示用户界面，一般为 false。aValueArgume">
+<meta name="keywords" content="javascript,原生方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue 微信踩坑">
-<meta property="og:url" content="http://yoursite.com/2018/02/08/vue-微信踩坑/index.html">
+<meta property="og:title" content="js原生方法document.execCommand()复制到粘贴板">
+<meta property="og:url" content="http://yoursite.com/2018/02/28/js原生方法document-execCommand-复制到粘贴板/index.html">
 <meta property="og:site_name" content="Eason壹捌柒肆">
-<meta property="og:description" content="App分享到微信： 分享之后微信会自动在/#/之后加上?from=timeline或?from=groupmessage或?from=singlemessage 分享之后第一次链接打开跳转授权是正常的，第二次打开如果有多个参数就会被去掉第一个之后的所有参数/解决办法/：   分享微信自动加参数可以用vue-router的前置路由守卫，代码实例分享链接比如http://www.xxx.com/#/">
+<meta property="og:description" content="document.execCommand()语法bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument) 返回值是布尔值，表示是否支持。 aCommandName: 命令名字,copy,cut等aShowDefaultUI:一个 Boolean， 是否展示用户界面，一般为 false。aValueArgume">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-28T02:03:15.612Z">
+<meta property="og:updated_time" content="2018-02-28T02:32:11.466Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue 微信踩坑">
-<meta name="twitter:description" content="App分享到微信： 分享之后微信会自动在/#/之后加上?from=timeline或?from=groupmessage或?from=singlemessage 分享之后第一次链接打开跳转授权是正常的，第二次打开如果有多个参数就会被去掉第一个之后的所有参数/解决办法/：   分享微信自动加参数可以用vue-router的前置路由守卫，代码实例分享链接比如http://www.xxx.com/#/">
+<meta name="twitter:title" content="js原生方法document.execCommand()复制到粘贴板">
+<meta name="twitter:description" content="document.execCommand()语法bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument) 返回值是布尔值，表示是否支持。 aCommandName: 命令名字,copy,cut等aShowDefaultUI:一个 Boolean， 是否展示用户界面，一般为 false。aValueArgume">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/08/vue-微信踩坑/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/28/js原生方法document-execCommand-复制到粘贴板/"/>
 
 
 
 
 
-  <title>vue 微信踩坑 | Eason壹捌柒肆</title>
+  <title>js原生方法document.execCommand()复制到粘贴板 | Eason壹捌柒肆</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/08/vue-微信踩坑/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/28/js原生方法document-execCommand-复制到粘贴板/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yafee_zhao">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vue 微信踩坑</h1>
+          <h1 class="post-title" itemprop="name headline">js原生方法document.execCommand()复制到粘贴板</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-08T11:31:24+08:00">
-                2018-02-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-28T10:01:42+08:00">
+                2018-02-28
               </time>
             
 
@@ -305,30 +305,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript/前端/微信/" itemprop="url" rel="index">
-                    <span itemprop="name">微信</span>
+                  <a href="/categories/javascipt/" itemprop="url" rel="index">
+                    <span itemprop="name">javascipt</span>
                   </a>
                 </span>
 
@@ -364,34 +342,14 @@
       
 
       
-        <ol>
-<li>App分享到微信：<ul>
-<li>分享之后微信会自动在<code>/#/</code>之后加上<code>?from=timeline</code>或<code>?from=groupmessage</code>或<code>?from=singlemessage</code></li>
-<li>分享之后第一次链接打开跳转授权是正常的，第二次打开如果有多个参数就会被去掉第一个之后的所有参数<br>/解决办法/：</li>
-</ul>
-<ol>
-<li>分享微信自动加参数可以用<code>vue-router</code>的前置路由守卫，代码实例<br>分享链接比如<code>http://www.xxx.com/#/index?data=value1-value2</code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">router.beforeEach(<span class="function">(<span class="params">to, <span class="keyword">from</span>, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (to.query.from) &#123;</span><br><span class="line">    <span class="keyword">let</span> queryString = to.query.from.split(<span class="string">'='</span>)[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">let</span> nextQuery = &#123;</span><br><span class="line">      data: queryString</span><br><span class="line">    &#125;;</span><br><span class="line">    next(&#123; <span class="attr">path</span>: <span class="string">'/booklist'</span>, <span class="attr">query</span>: nextQuery &#125;)</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    next();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-</ol>
-<a id="more"></a>
-<pre><code>2. app分享时只传一个参数，把所有参数值用`_`连接，比如`data=value1-value2`，不要用`key1=value1&amp;key2=value2`，取值的时候可以用`this.$route.query.data.split(&apos;_&apos;)`得到数组之后再取单个的值。
-</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="keyword">this</span>.$route.query.data) &#123;</span><br><span class="line">  <span class="keyword">let</span> queryArray = <span class="keyword">this</span>.$route.query.data.split(<span class="string">'_'</span>);</span><br><span class="line">  <span class="keyword">this</span>.key1 = queryArray[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">this</span>.key2 = queryArray[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>vue微信问题</p>
-<ul>
-<li><p>微信获取授权<br>如果使用的路由模式是默认hash，把<code>#</code>去掉，判断是否已经授权，如果未授权，用<code>window.location.href</code>跳转后台授权接口，并且把处理后的链接地址当作参数带过去，<code>window.location.href=&#39;/wxAuth?url=&#39;+url;</code>然后后台授权成功之后跳转中转页面，把页面链接url当作参数传过来，用再把<code>#</code>加上去，设置已授权<code>flag</code>，再跳转回原来的页面；<br>访问页面：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> url = <span class="built_in">window</span>.location.href;</span><br><span class="line"><span class="keyword">let</span> isAuth = <span class="built_in">window</span>.sessionStorage.getItem(<span class="string">'isAuth'</span>);</span><br><span class="line"><span class="keyword">if</span> (!isAuth) &#123;</span><br><span class="line">  <span class="keyword">let</span> nextUrl = url.replace(<span class="string">'#/'</span>, <span class="string">''</span>);</span><br><span class="line">  <span class="built_in">window</span>.location.href = <span class="string">"/wxAuth?url="</span>+url;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>中转页面：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> url = <span class="built_in">window</span>.location.href;</span><br><span class="line"><span class="keyword">let</span> reUrl = <span class="built_in">window</span>.location.search.split(<span class="string">'?url='</span>)[<span class="number">1</span>];</span><br><span class="line"><span class="built_in">window</span>.sessionStorage.setItem(<span class="string">'isAuth'</span>, <span class="literal">true</span>);</span><br><span class="line">reUrl = reUrl.replace(<span class="string">'index'</span>, <span class="string">'#/index'</span>);</span><br><span class="line"><span class="built_in">window</span>.location.href = reUrl;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>微信支付<br>首先，<code>wx.config</code>中注入<code>chooseWXPay</code>微信支付后台授权目录配到二级，在支付页面<code>#</code>前面加上<code>?</code>,然后原页面跳转一下，</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> url = <span class="built_in">window</span>.location.href;</span><br><span class="line"><span class="keyword">if</span> (!url.match(<span class="regexp">/\?#/</span>)) &#123;</span><br><span class="line">  <span class="built_in">window</span>.location.replace(<span class="built_in">window</span>.location.href.split(<span class="string">'#'</span>)[<span class="number">0</span>] + <span class="string">'?'</span> + <span class="built_in">window</span>.location.hash);</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
+        <h2 id="document-execCommand-语法"><a href="#document-execCommand-语法" class="headerlink" title="document.execCommand()语法"></a><code>document.execCommand()</code>语法</h2><p><code>bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)</code> 返回值是布尔值，表示是否支持。</p>
+<p><code>aCommandName</code>: 命令名字,<code>copy,cut</code>等<br><code>aShowDefaultUI</code>:一个 <code>Boolean</code>， 是否展示用户界面，一般为 false。<br><code>aValueArgument</code>:一些命令（例如insertImage）需要额外的参数（insertImage需要提供插入image的url），默认为null,一般不用。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="从输入框复制"><a href="#从输入框复制" class="headerlink" title="从输入框复制"></a>从输入框复制</h3><p>页面需要一个<code>input</code>标签，demo如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"demoInput"</span> <span class="attr">value</span>=<span class="string">"hello world"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span>点我复制<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">'#btn'</span>);</span><br><span class="line">btn.addEventListener(<span class="string">'click'</span>, () =&gt; &#123;</span><br><span class="line">	<span class="keyword">let</span> input = <span class="built_in">document</span>.querySelector(<span class="string">'#demoInput'</span>);</span><br><span class="line">	input.select();</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">document</span>.execCommand(<span class="string">'copy'</span>)) &#123;</span><br><span class="line">		<span class="built_in">document</span>.execCommand(<span class="string">'copy'</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'复制成功'</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="不从输入框复制"><a href="#不从输入框复制" class="headerlink" title="不从输入框复制"></a>不从输入框复制</h3><a id="more"></a>
+<p>由于<code>document.execCommand()</code>只能操作可编辑区域，即<code>&lt;input&gt;</code>,<code>&lt;textarea&gt;</code>,这样就要动态添加可编辑区域再删除。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"val"</span>&gt;</span>复制内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span>点我复制<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">'#btn'</span>);</span><br><span class="line"><span class="keyword">let</span> val = <span class="built_in">document</span>.querySelector(<span class="string">'#val'</span>).innerHTML;</span><br><span class="line">btn.addEventListener(<span class="string">'click'</span>,() =&gt; &#123;</span><br><span class="line">	<span class="keyword">let</span> input = <span class="built_in">document</span>.createElement(<span class="string">'input'</span>);</span><br><span class="line">  input.setAttribute(<span class="string">'readonly'</span>, <span class="string">'readonly'</span>);</span><br><span class="line">  input.setAttribute(<span class="string">'value'</span>, val);</span><br><span class="line">  <span class="built_in">document</span>.body.appendChild(input);</span><br><span class="line">	input.setSelectionRange(<span class="number">0</span>, val.length);</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">document</span>.execCommand(<span class="string">'copy'</span>)) &#123;</span><br><span class="line">		<span class="built_in">document</span>.execCommand(<span class="string">'copy'</span>);</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'复制成功'</span>);</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="built_in">document</span>.body.removeChild(input);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><code>input.setAttribute(&#39;readonly&#39;, &#39;readonly&#39;)</code>,兼容在iOS环境下瞬间拉起键盘又缩回的闪烁；<br><code>input.setSelectionRange(0, val.length);</code>,还是因为在iOS环境下，<code>input.select()</code>没有选中全部内容。</p>
 
       
     </div>
@@ -411,11 +369,7 @@
           
             <a href="/tags/javascript/" rel="tag"># javascript</a>
           
-            <a href="/tags/vue/" rel="tag"># vue</a>
-          
-            <a href="/tags/微信授权/" rel="tag"># 微信授权</a>
-          
-            <a href="/tags/微信支付/" rel="tag"># 微信支付</a>
+            <a href="/tags/原生方法/" rel="tag"># 原生方法</a>
           
         </div>
       
@@ -428,15 +382,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/02/08/vue-微信踩坑/" rel="next" title="vue 微信踩坑">
+                <i class="fa fa-chevron-left"></i> vue 微信踩坑
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/28/js原生方法document-execCommand-复制到粘贴板/" rel="prev" title="js原生方法document.execCommand()复制到粘贴板">
-                js原生方法document.execCommand()复制到粘贴板 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -488,8 +442,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -581,6 +544,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#document-execCommand-语法"><span class="nav-number">1.</span> <span class="nav-text">document.execCommand()语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">2.</span> <span class="nav-text">使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#从输入框复制"><span class="nav-number">2.1.</span> <span class="nav-text">从输入框复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不从输入框复制"><span class="nav-number">2.2.</span> <span class="nav-text">不从输入框复制</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
