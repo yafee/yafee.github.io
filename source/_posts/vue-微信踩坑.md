@@ -6,6 +6,7 @@ categories:
 - 前端
 - 微信
 tags:
+- javascript
 - vue
 - 微信授权
 - 微信支付
